@@ -1,0 +1,10 @@
+---
+bw_rabbit_proto: http
+bw_rabbit_uri: http://10.11.255.49:8080
+bw_rabbit_port: 8080
+bw_rabbit_user: web
+bw_rabbit_password: web
+bw_rabbit_exchange: consoleresponse
+bw_rabbit_method: POST
+bw_rabbit_body: {"properties": {"Content-Type": "application/json"},"routing_key": "","payload_encoding": "string","payload": "{\"status\":\"success\",\"message\":\"Password Updated  Successfully!\",\"controller\":\"whmcs\",\"action\":\"changepassword\",\"userid\":\"18842\"}"}
+bw_rabbit_body_format: json

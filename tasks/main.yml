@@ -1,0 +1,16 @@
+---
+
+- name: "Submitting data to RabbitMQ Exchange"
+  uri:
+   url: "{{ bw_rabbit_uri }}/api/exchanges/%2f/{{ bw_rabbit_exchange }}/publish"
+   method: "{{ bw_rabbit_method }}"
+   user: "{{ bw_rabbit_user }}"
+   password: "{{ bw_rabbit_password }}"
+   return_content: yes
+   body: "{{ bw_rabbit_body }}"
+   body_format: "{{ bw_rabbit_body_format }}"
+   status_code: 200
+  register: data
+
+- debug:
+   msg: echo {{ data.json }}
